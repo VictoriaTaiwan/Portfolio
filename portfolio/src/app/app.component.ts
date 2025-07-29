@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms'; 
-import emailjs from 'emailjs-com';
 import { CommonModule } from '@angular/common';
+import emailjs from 'emailjs-com';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
+
 export class AppComponent implements OnInit{
   title = 'portfolio';
   mailForm!: FormGroup;
