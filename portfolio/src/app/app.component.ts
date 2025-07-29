@@ -1,23 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http'; 
+import { ReactiveFormsModule } from '@angular/forms'; 
+import emailjs from 'emailjs-com';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ReactiveFormsModule],
+  standalone: true,
+  imports: [RouterOutlet, ReactiveFormsModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'portfolio';
   mailForm!: FormGroup;
+  mailStatus: string = '';
 
-  constructor(
-    private formBuilder: FormBuilder, 
-    private http: HttpClient
-  ) {}
+  constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
     this.mailForm = this.formBuilder.group({
@@ -28,17 +28,21 @@ export class AppComponent {
   }
 
   submitForm(): void {
-    if (this.mailForm.valid) {
-      const payload = this.mailForm.value;
-
-      this.http.post('https://happy-dodie-iries-dev-672a5762.koyeb.app/mail', payload).subscribe({
-        next: () => alert('Message sent successfully!'),
-        error: (error) => {
-          console.error('Failed to send message', error);
-          alert('Failed to send message.');
-        }
-      });
-    }
+    if (this.mailForm.invalid) return;
+    this.mailStatus = 'Sending your message...';
+    emailjs.send(
+      'service_ta3oyte',
+      'template_qf0s1yc',
+      {...this.mailForm.value},
+      'iS6a41VHZGf9_Y7r8'
+    ).then(() => {
+        this.mailStatus = 'Message sent successfully!';
+        this.mailForm.reset();
+      },
+      (error) => {
+        this.mailStatus = 'Failed to send message. Try again later.';
+        console.error('EmailJS Error:', error);
+      }
+    );
   }
-
 }
