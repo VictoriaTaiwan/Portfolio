@@ -16,7 +16,12 @@
 	/* Top description */
 	
 	.top-description-container {
-		@apply mx-auto max-w-5xl px-6 pb-8 md:h-screen md:max-h-[950px] md:max-w-7xl flex h-full flex-col items-center justify-center md:flex-row md:pb-12;
+		opacity: 1;
+		animation-name: fadeInOpacity;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-duration: 1s;
+		@apply mx-auto max-w-5xl px-6 pb-8 h-screen md:max-h-[950px] md:max-w-7xl flex h-full flex-col justify-center md:flex-row md:pb-12 mt-40;
 	}
 
 	.download-cv-link {
@@ -38,17 +43,17 @@
 	}
 
 	.tabs-container {
-		background: linear-gradient(to right, #2f3128, #494d3b);
+		background: linear-gradient(to right,#303130,#5a6f52);
 		box-shadow: 0 0 20px 8px rgba(135, 151, 147, 0.3);
-		@apply text-white p-7 max-w-4xl mx-auto font-mono rounded-b-xl rounded-r-xl p-10;
+		@apply text-white p-7 md:max-w-4xl mx-auto font-mono rounded-b-xl rounded-r-xl p-10;
 	}
 
 	.tab-link {		
 		background-repeat: no-repeat;
 		background-position: 15% center;
 		background-size: 2.2rem;
-		@apply px-20 py-3 inline-block rounded-t-xl bg-[#494d3b] text-[19px] text-white text-base font-semibold transition-all 
-		duration-200 ease-in-out hover:bg-[#5d6149] hover:shadow-lg;
+		@apply px-20 py-3 inline-block rounded-t-xl bg-[#303130] text-[19px] text-white text-base font-semibold transition-all 
+		duration-200 ease-in-out hover:bg-[#5a6f52] hover:shadow-lg;
 	}
 
 	#tab-link-1 {
@@ -60,7 +65,7 @@
 	}	
 
 	.active-tab {
-		@apply bg-[#6f735e];
+		@apply bg-[#6f786f];
 	}
 
 	.tab-content {
