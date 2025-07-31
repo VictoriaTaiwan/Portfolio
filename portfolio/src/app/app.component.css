@@ -1,1 +1,172 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@layer components {
+	/* Top description */
+	
+	.top-description-container {
+		@apply mx-auto max-w-5xl px-6 pb-8 md:h-screen md:max-h-[950px] md:max-w-7xl flex h-full flex-col items-center justify-center md:flex-row md:pb-12;
+	}
+
+	.download-cv-link {
+		@apply relative inline-flex items-center justify-center select-none rounded-2xl ease-in-out 
+        bg-[#56282D] hover:bg-[#823D44] border border-black text-base h-12 gap-0 px-5 font-semibold;
+	}
+
+	.hover\:glow-circle:hover {
+		box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.6),
+					0 0 20px 8px rgba(255, 255, 255, 0.3);
+		transition: box-shadow 0.3s ease-in-out;
+		border-radius: 9999px;
+	}
+	
+	/* About me */
+
+	.about {
+		@apply flex flex-col items-center gap-6 mt-20;
+	}
+
+	.tabs-container {
+		background: linear-gradient(to right, #2f3128, #494d3b);
+		box-shadow: 0 0 20px 8px rgba(135, 151, 147, 0.3);
+		@apply text-white p-7 max-w-4xl mx-auto font-mono rounded-b-xl rounded-r-xl p-10;
+	}
+
+	.tab-link {		
+		background-repeat: no-repeat;
+		background-position: 15% center;
+		background-size: 2.2rem;
+		@apply px-20 py-3 inline-block rounded-t-xl bg-[#494d3b] text-[19px] text-white text-base font-semibold transition-all 
+		duration-200 ease-in-out hover:bg-[#5d6149] hover:shadow-lg;
+	}
+
+	#tab-link-1 {
+		background-image: url('/assets/icons/mobile.svg');
+	}
+
+	#tab-link-2 {
+		background-image: url('/assets/icons/web.svg');
+	}	
+
+	.active-tab {
+		@apply bg-[#6f735e];
+	}
+
+	.tab-content {
+		opacity: 1;
+		animation-name: fadeInOpacity;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-duration: 1s;		
+		@apply text-white flex flex-col gap-10;
+	}
+
+	.tab-content-title {
+		@apply text-[#e6cd48] text-[19px] font-semibold;
+	}
+
+	.tab-content ul {
+		@apply flex flex-wrap gap-6 text-base;
+	}
+
+	.tab-content li {
+		@apply flex flex-wrap items-center gap-3;
+	}
+
+	.tab-content span {
+		@apply text-[#FFFBEA] text-[17px];
+	}
+
+	/* Projects */
+
+	.projects-container {
+		@apply flex flex-col items-center gap-6 px-4 mt-70;
+	}
+
+	.project-card {
+	@apply w-full max-w-7xl flex flex-wrap md:flex-nowrap gap-10 p-6 rounded-xl shadow-lg text-white;
+	background: linear-gradient( 135deg, #1C1A1A, #282525, #752f3b);
+	box-shadow: 0 0 20px 8px rgba(135, 151, 147, 0.3);
+	}
+
+	.project-card-content {
+		@apply w-full md:w-1/2 flex flex-col;
+	}
+
+	.project-card p {
+		@apply mt-2 text-white text-[18px];
+	}
+
+	.project-card h3 {
+		@apply text-xl font-bold text-[#DBD56E];
+	}
+
+	.project-card img {
+		@apply w-full aspect-[4/3] object-contain;
+	}
+
+	.project-card video {
+		@apply w-full md:w-1/2 aspect-video object-cover;
+	}
+
+	.project-card a {
+		@apply mt-6 max-w-3xs text-white bg-[#40495c] border border-black font-medium rounded-lg text-[1rem] w-full sm:w-auto px-5 py-2.5 text-center;
+	}
+
+	.project-card a:hover {
+		@apply bg-[#7486ad];
+	}
+
+	.project-card a:focus {
+		@apply ring-4 outline-none ring-blue-300 ;
+	}
+
+	/* Contacts */
+
+	.contact-form {
+		@apply md:max-w-sm max-w-xs mx-auto mb-20;
+	}
+
+	.contact-form button {
+		@apply text-white bg-[#47573e] border border-black font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+	}
+
+	.contact-form button:hover {
+		@apply bg-[#5b7051];
+	}
+
+	.contact-form button:disabled {
+		@apply opacity-50 cursor-not-allowed bg-[#878D8B];
+	}
+
+	.contact-form button:focus {
+		@apply ring-4 outline-none;
+	}
+
+	.status-label {
+		@apply block mt-6 mb-4 px-4 py-2 rounded font-medium text-center transition-all duration-300;
+	}
+
+	.mail-sender-container {
+		@apply mb-5 flex flex-col gap-2;
+	}
+
+	.mail-sender-field {
+		@apply bg-[#B8BDBC] border border-black text-black text-sm rounded-lg block w-full p-2.5;
+	}
+
+	.mail-sender-field:focus {
+		@apply border-[#F6F930] ring-[#F6F930] ring-2 outline-none;
+	}
+}

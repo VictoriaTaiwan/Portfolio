@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { CommonModule } from '@angular/common';
@@ -8,7 +7,7 @@ import emailjs from 'emailjs-com';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -18,6 +17,7 @@ export class AppComponent implements OnInit{
   title = 'portfolio';
   mailForm!: FormGroup;
   mailStatus: string = '';
+  tab!: string;
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -27,6 +27,12 @@ export class AppComponent implements OnInit{
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required]
     });
+    this.tab = 'mobile'
+  }
+
+  setTab(tab:string): void {
+    this.tab = tab;
+    console.log(tab);
   }
 
   submitForm(): void {
