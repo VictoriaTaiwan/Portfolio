@@ -1,6 +1,2 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
-
-body.banner {
-    background-image: linear-gradient(rgba(49, 47, 47, 0.5), rgba(94, 94, 94, 0.5)), url('/assets/background.jpg');  
-}
