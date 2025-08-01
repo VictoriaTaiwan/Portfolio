@@ -39,13 +39,13 @@
 	/* About me */
 
 	.about {
-		@apply flex flex-col items-center gap-6 mt-20;
+		@apply flex flex-col items-center gap-6 mt-20 ;
 	}
 
 	.tabs-container {
 		background: linear-gradient(to right,#303130,#5a6f52);
 		box-shadow: 0 0 20px 8px rgba(135, 151, 147, 0.3);
-		@apply text-white p-7 md:max-w-4xl mx-auto font-mono rounded-b-xl rounded-r-xl p-10;
+		@apply text-white p-7 md:max-w-4xl font-mono rounded-b-xl rounded-r-xl p-10;
 	}
 
 	.tab-link {		
@@ -74,7 +74,7 @@
 		animation-iteration-count: 1;
 		animation-timing-function: ease-in;
 		animation-duration: 1s;		
-		@apply text-white flex flex-col gap-10;
+		@apply text-white flex flex-col gap-10 md:h-[520px] md:w-[700px];
 	}
 
 	.tab-content-title {
@@ -118,11 +118,11 @@
 	}
 
 	.project-card img {
-		@apply w-full aspect-[4/3] object-contain;
+		@apply md:w-1/2 aspect-[4/3] object-contain;
 	}
 
 	.project-card video {
-		@apply w-full md:w-1/2 aspect-video object-cover;
+		@apply md:w-1/2 aspect-video object-cover;
 	}
 
 	.project-card a {

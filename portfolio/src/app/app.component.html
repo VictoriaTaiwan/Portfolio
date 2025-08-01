@@ -1,14 +1,14 @@
 
 <section class="top-description-container">
       <div class="origin-center-left order-2 md:order-1 lg:pl-16;">
-        <h1 class="mb-10 effect-font-styling font-domaine text-[4rem] md:text-[6rem] tracking-[-0.01em] leading-[100%] relative text-center md:text-left pb-3">
-          Victoria <br> Shalygina
-        </h1>
-        <p class="text-lg md:text-[1.125rem] md:leading-[1.5] text-[#ddc9b4] font-normal relative mb-8 mt-2 max-w-[30rem] text-center leading-7 md:text-left">
-          Hello, I'm Victoria, a software developer located in Taiwan.
-          I'm passionate about building web and mobile applications.
-        </p>
-  
+          <h1 class="mb-10 effect-font-styling font-domaine text-[4rem] md:text-[6rem] tracking-[-0.01em] leading-[100%] relative text-center md:text-left pb-3">
+            Victoria <br> Shalygina
+          </h1>
+          <p class="text-lg md:text-[1.125rem] md:leading-[1.5] text-[#ddc9b4] font-normal relative mb-8 mt-2 max-w-[30rem] text-center leading-7 md:text-left">
+            Hello, I'm Victoria, a software developer located in Taiwan.
+            I'm passionate about building web and mobile applications.
+          </p>
+
         <div class="flex flex-row justify-left gap-4 md:flex-row md:justify-left">
           <a href="assets/Victoria Shalygina (Software Developer).pdf" target="_blank"
             class="download-cv-link">
@@ -35,13 +35,15 @@
   </section>
 
 <div id="about" class="about" id="about">
-  <h1 class="effect-font-styling font-domaine text-[3rem] md:text-[3rem] tracking-[-0.01em] leading-[100%] relative text-center md:text-left pb-3">About me</h1>
-  <p class="text-lg text-wrap px-5 md:text-[1.125rem] md:leading-[1.5] text-[#ddc9b4] font-normal max-w-prose mb-8 mt-2 relative text-center leading-7 md:text-center">
-    I'm full-stack web and mobile developer with a strong interest in cross-platform technologies
-    and user-friendly design. I started my career as a native Android developer, building apps with Kotlin,
-    and later used that foundation to launch my own cross-platform application using Flutter.
-  </p>
-<section class="items-center my-6">
+  <div class="text-center">
+    <h1 class="font-domaine text-[3rem] md:text-[3rem] py-8">About me</h1>
+    <p class="text-lg text-wrap px-5 md:text-[1.125rem] md:leading-[1.5] text-[#ddc9b4] font-normal max-w-prose mb-8 mt-2 relative text-center leading-7 md:text-center">
+      I'm full-stack web and mobile developer with a strong interest in cross-platform technologies
+      and user-friendly design. I started my career as a native Android developer, building apps with Kotlin,
+      and later used that foundation to launch my own cross-platform application using Flutter.
+    </p>
+  </div>
+<section class="md:items-center my-6 mx-5 ">
   <ul class="flex gap-1">
     <button id="tab-link-1" class="tab-link" [ngClass]="{ 'active-tab': tab === 'mobile' }" (click)="setTab('mobile')">Mobile stack</button>
     <button id="tab-link-2" class="tab-link" [ngClass]="{ 'active-tab': tab === 'web' }" (click)="setTab('web')">Web stack</button>
