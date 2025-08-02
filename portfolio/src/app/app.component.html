@@ -155,7 +155,9 @@
 <div class="projects-container" id="projects">
   <h1 class=" mb-15 effect-font-styling font-domaine text-[3rem] md:text-[3rem] tracking-[-0.01em] leading-[100%] relative text-center md:text-left pb-3">Projects</h1>
   <div class="project-card">
-    <img src="assets/projects/fitsy_dev_1.png" alt="Fitsy"/>
+    <video class="object-contain aspect-[4/3]" autoplay [muted]="'muted'" loop>
+      <source src="assets/projects/fitsy.mp4" type="video/mp4">
+    </video>
     <div class="project-card-content">
       <h3>New-gen menu generator</h3>
       <p>
@@ -169,7 +171,7 @@
   </div>
   
   <div class="project-card">
-    <video controls autoplay loop muted>
+    <video autoplay loop muted>
       <source src="assets/projects/ff14_tools_example.mp4" type="video/mp4">
     </video>
     <div class="project-card-content">
@@ -183,7 +185,7 @@
   </div>
 
   <div class="project-card">
-    <video controls autoplay loop>
+    <video autoplay loop muted>
       <source src="assets/projects/overlay_translator_example.mp4" type="video/mp4">
     </video>
     <div class="project-card-content">
