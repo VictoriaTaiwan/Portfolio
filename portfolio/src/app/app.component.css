@@ -39,20 +39,20 @@
 	/* About me */
 
 	.about {
-		@apply flex flex-col items-center gap-6 mt-20 ;
+		@apply flex flex-col md:items-center gap-6 mt-20;
 	}
 
 	.tabs-container {
 		background: linear-gradient(to right,#303130,#5a6f52);
 		box-shadow: 0 0 20px 8px rgba(135, 151, 147, 0.3);
-		@apply text-white p-7 md:max-w-4xl font-mono rounded-b-xl rounded-r-xl p-10;
+		@apply text-white p-7 font-mono rounded-b-xl rounded-r-xl p-10;
 	}
 
 	.tab-link {		
 		background-repeat: no-repeat;
 		background-position: 15% center;
 		background-size: 2.2rem;
-		@apply px-20 py-3 inline-block rounded-t-xl bg-[#303130] text-[19px] text-white text-base font-semibold transition-all 
+		@apply px-17 md:py-3 py-2 inline-block rounded-t-xl bg-[#303130] text-[19px] text-white text-base font-semibold transition-all 
 		duration-200 ease-in-out hover:bg-[#5a6f52] hover:shadow-lg;
 	}
 
@@ -74,7 +74,7 @@
 		animation-iteration-count: 1;
 		animation-timing-function: ease-in;
 		animation-duration: 1s;		
-		@apply text-white flex flex-col gap-10 md:h-[520px] md:w-[700px];
+		@apply text-white flex flex-col gap-10;
 	}
 
 	.tab-content-title {
@@ -122,7 +122,7 @@
 	}
 
 	.project-card video {
-		@apply md:w-1/2 aspect-video object-cover;
+		@apply md:w-1/2 md:aspect-video object-cover;
 	}
 
 	.project-card a {
