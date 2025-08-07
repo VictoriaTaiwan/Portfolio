@@ -50,10 +50,10 @@
 
 	.tab-link {		
 		background-repeat: no-repeat;
-		background-position: 15% center;
-		background-size: 2.2rem;
-		@apply px-17 md:py-3 py-2 inline-block rounded-t-xl bg-[#303130] text-[19px] text-white text-base font-semibold transition-all 
-		duration-200 ease-in-out hover:bg-[#5a6f52] hover:shadow-lg;
+		background-position: 13% center;
+		background-size: 2.1rem;
+		@apply md:px-17 px-13 py-3 inline-block rounded-t-xl bg-[#303130] md:text-[19px] text-[18px] text-white text-base font-semibold transition-all 
+		duration-200 ease-in-out hover:bg-[#5a6f52] hover:shadow-lg w-[170px] h-[75px] md:w-65 md:h-auto;
 	}
 
 	#tab-link-1 {

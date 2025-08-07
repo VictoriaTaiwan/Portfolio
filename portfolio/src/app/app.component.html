@@ -44,7 +44,7 @@
     </p>
   </div>
 <section class="md:items-center my-6 mx-5 md:h-[520px] md:w-[750px]">
-  <ul class="flex gap-1">
+  <ul class="flex flex-row flex-wrap gap-1">
     <button id="tab-link-1" class="tab-link" [ngClass]="{ 'active-tab': tab === 'mobile' }" (click)="setTab('mobile')">Mobile stack</button>
     <button id="tab-link-2" class="tab-link" [ngClass]="{ 'active-tab': tab === 'web' }" (click)="setTab('web')">Web stack</button>
   </ul>
